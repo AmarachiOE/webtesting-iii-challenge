@@ -11,7 +11,8 @@ describe("<Dashboard/>", () => {
         render(<Dashboard/>);
     });
 
-    describe("Button Text Change", () => {
+    describe.skip("Button Text Change", () => {
+        // NOW TESTING ON CONTROLS.TEST.JS
         it("should change close gate to open gate", () => {
             const { getByText } = render(<Dashboard/>);
             const closeButton = getByText("Close Gate");
