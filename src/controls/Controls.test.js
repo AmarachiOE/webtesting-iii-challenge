@@ -60,14 +60,14 @@ describe("<Controls/>", () => {
   });
 
   describe.skip("Button Clicks and Spy", () => {
-      it("should invoke spy when button clicked", () => {
-          const spy = jest.fn();
-          const { getByText } = render(<Controls toggleLocked={spy} />);
-          const lockButton = getByText(/lock/i); // should capture both unlock and lock versions of button
-          fireEvent.click(lockButton);
-          fireEvent.click(lockButton);
-          expect(spy).toHaveBeenCalled();
-          expect(spy).toHaveBeenCalledTimes(2);
-      });
-  })
+    it("should invoke spy when button clicked", () => {
+      const spy = jest.fn();
+      const { getByText } = render(<Controls toggleLocked={spy} />);
+      const lockButton = getByText(/lock/i); // should capture both unlock and lock versions of button
+      fireEvent.click(lockButton);
+      fireEvent.click(lockButton);
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledTimes(2);
+    });
+  });
 });
